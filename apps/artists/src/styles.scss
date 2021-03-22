@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+
+.artist-search__container {
+  margin-top: 100px  !important;
+}
+.artist-search__button {
+   margin-left: 30px !important;
+   color: #333 !important;
+   box-shadow: -3px 3px #000, -2px 2px #000, -1px 1px #000 !important;
+   border: 1px solid #000 !important;
+}
+
+.artist-search__width {
+    width: 100% !important;
+    margin: 0 auto;
+}
+.artist-search__input {
+    border-radius: 50px !important;
+}
+.artist-list__names {
+    margin-top: 80px;
+    padding-bottom: 200px !important;
+}
+
+.module_name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top:20px;
+    margin-bottom: 60px;
+    text-decoration: underline;
+}
+
+.artist_name {
+    
+    font-size: 16px;
+    
+    font-weight: bold;
+}
+.artist__card {
+    line-height: 210%;
+    
+}
+
+.artists__card_css {
+    min-height: 200px !important;
+}
+.header{
+    font-size: 16px !important;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.example {
+    text-align: center;
+}
+
+.emoji-flag {
+    font-size:3rem !important;
+}
+.emoji-text {
+    font-size:1rem !important;
+}
+
+.track-list{
+    
+        list-style:none;
+        line-height: 180%;
+       
+}
+
+.not-found { 
+    padding-top: 60px;
+}
+.fav-link { 
+    padding: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+ }
+
+ .button-mobile { 
+     padding-top: 20px;
+     padding-bottom: 10px;
+     text-align: center;
+ }
+
+ 
+
+  
+    .mostrar {
+        display: none   !important
+    }
+ 
+  @media (min-width: 200px) and (max-width: 995px) {
+  
+    .mostrar {
+        display: inline-block  !important;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    
+  }
