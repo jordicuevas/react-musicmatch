@@ -75,7 +75,7 @@ export function _isArtistFavorite(json, value) {
  *
  */
 export function setFavorite(artist, id) {
-  const favs = JSON.parse(localStorage.getItem('favorites'));
+  const favs = JSON.parse(localStorage.getItem('favorites')) || [];
 
   if (favs.length > 0) {
     for (let i = 0; i < favs.length; i++) {
@@ -111,7 +111,7 @@ export function setFavorite(artist, id) {
  *
  */
 export function checkFavorite(artist, id) {
-  const favs = JSON.parse(localStorage.getItem('favorites'));
+  const favs = JSON.parse(localStorage.getItem('favorites')) || [];
   if (favs.length > 0) {
     for (let i = 0; i < favs.length; i++) {
       let isFav = _isArtistFavorite(favs, id);
