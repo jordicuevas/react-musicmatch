@@ -31,11 +31,15 @@ class App extends Component {
  
     this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
 
-     //localStorage.setItem("favorites", JSON.stringify([]))
-  }
+   }
   forceUpdateHandler(){
     this.forceUpdate();
   };
+
+/**
+ * resetSearch : inicializa el estado de la busqueda
+ *
+ */
   resetSearch() {
     this.setState({ checkFavs: false, isSearch: false, module_name: 'Top 12 by Musicxmatch'  }, () => {
       this.setState({ checkFavs: false, isSearch: false, module_name: 'Top 12 by Musicxmatch' });
@@ -43,7 +47,11 @@ class App extends Component {
 
     });
   }
-  
+
+/**
+ * getFavorites : funcion para obtener los favoritos
+ *
+ */
   getFavorites() {
     const favs = JSON.parse ( localStorage.getItem("favorites") )
     if ( favs.length > 0) {
@@ -55,12 +63,21 @@ class App extends Component {
     }
 
   }
+
+/**
+ * resetState : funcion para resetear el estado
+ *
+ */
   resetState() {
     this.setState({ isSearch: true }, () => {
       this.setState({ isLoading: false, isSearch: false });
-      console.log(this.state);
-    });
+     });
   }
+
+/**
+ * searchArtist : funcion para realizar la busqueda de artistas
+ *
+ */
   searchArtist() {
      const ArtistSearchName = (document.getElementById(
       'search-box'
@@ -71,7 +88,7 @@ class App extends Component {
       artistName: ArtistSearchName,
       module_name: ArtistSearchName,
     });
-    console.log(this.state);
+     
     this.setState({ isSearch: false }, () => {
       if (isBlank(ArtistSearchName) || isEmpty(ArtistSearchName)) {
         toast.error(searchMessages.emptyBox);
